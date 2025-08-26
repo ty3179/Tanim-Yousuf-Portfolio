@@ -1,0 +1,17 @@
+
+:root{--pad:clamp(12px,2vmin,24px);--radius:14px;--shadow:0 10px 30px rgba(0,0,0,.15)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;line-height:1.5;background:#0b0c10;color:#e6eef5}
+h1,h2{margin:0 0 .5rem 0}.hero{position:relative;height:min(72vh,720px);display:grid;place-items:center;overflow:hidden;background:#0b0c10}
+.hero__content{position:relative;z-index:2;text-align:center;padding:var(--pad)}.hero__content h1{font-size:clamp(36px,6vw,72px)}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(105%) saturate(105%) brightness(80%)}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.65))}
+.intro{padding:calc(var(--pad)*2) var(--pad) max(var(--pad)*1.5,24px);max-width:1100px;margin:auto}
+.gallery{display:grid;gap:var(--pad);grid-template-columns:repeat(auto-fill,minmax(220px,1fr));padding:0 var(--pad) calc(var(--pad)*2)}
+.card{display:block;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);transform:translateY(10px);opacity:0;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.card img{width:100%;height:240px;object-fit:cover;display:block;transform:scale(1.02);transition:transform .7s}
+.card:hover img{transform:scale(1.07)}.reels{max-width:1100px;margin:auto;padding:0 var(--pad) calc(var(--pad)*3)}
+.reels__grid{display:grid;gap:var(--pad);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.reel{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);background:#111}
+.footer{padding:var(--pad);text-align:center;opacity:.6}.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:grid;place-items:center;padding:var(--pad);z-index:10}
+.lightbox[hidden]{display:none}.lightbox img{max-width:min(92vw,1400px);max-height:82vh;border-radius:var(--radius);box-shadow:var(--shadow)}
+.lightbox__close{position:absolute;top:12px;right:12px;font-size:40px;line-height:1;background:transparent;border:0;color:#fff;cursor:pointer}
+.lightbox__caption{margin-top:.5rem;opacity:.8;text-align:center;max-width:90ch}.revealed{transform:none!important;opacity:1!important}
